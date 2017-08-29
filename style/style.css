@@ -1,0 +1,103 @@
+.document {
+  background-color: aliceblue;
+}
+
+/************************ Search Bar ************************/
+
+.search-bar {
+  margin: 20px;
+  text-align: center;
+  height: 50px;
+  font-size: 1.1em;
+  font-weight: 300;
+  font-family: sans-serif;
+}
+
+.search-bar input {
+  width: 60%;
+}
+
+.search-btn {
+  background-color: whitesmoke;
+  padding: 0px 5px;
+  border: 1px solid black;
+  border-radius: 4px;
+  cursor: pointer;
+  margin: 15px;
+}
+
+.search-btn:hover {
+  background-color: lightgrey;
+}
+
+/************************ Video Item ************************/
+
+.list-item {
+  cursor: pointer;
+  padding-top: 15px;
+  background-color: black;
+  border-top: 1px solid black;
+  border-right: 2px solid black;
+  border-left: 2px solid black;
+  margin-bottom: 10px;
+  border-radius: 10px;
+}
+
+.list-item:hover {
+  background-color: lightblue;
+}
+
+.video-list {
+  border-bottom: 2px solid black;
+  border-top: 1px solid black;
+  background-color: whitesmoke;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.media-heading {
+  font-size: .9em;
+  font-weight: bold;
+}
+
+.media-body {
+  padding: 5px;
+  font-size: .8em;
+}
+
+.video-item img {
+  max-width: 64px;
+}
+
+/************************ Video Details ************************/
+
+.embed-video {
+  border-radius: 10px;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  background-color: black;
+}
+
+.video-detail .details {
+  font-size: .9em;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: whitesmoke;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+
+.details-title {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+/************************ Video List ************************/
+
+/************************ Helper ************************/
+
+.center-element {
+  margin: auto;
+  display: block;
+}

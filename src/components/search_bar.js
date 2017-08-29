@@ -8,25 +8,38 @@ class SearchBar extends Component {
 
     // Binds "this" to the onInputChange method
     this.onInputChange = this.onInputChange.bind(this);
+    this.handleKeyPressed = this.handleKeyPressed.bind(this);
   }
+
+  handleKeyPressed = event => {
+    if (event.charCode === 13) {
+      this.props.onSearchBtnClick(this.state.term);
+
+      event.value = '';
+      this.setState({ term: '' });
+    }
+  };
   render() {
     return (
-      <div>
-        <input value={this.state.term} onChange={this.onInputChange} />
+      <div className="search-bar">
+        <input
+          placeholder="Search ..."
+          value={this.state.term}
+          onChange={this.onInputChange}
+          onKeyPress={this.handleKeyPressed}
+        />
+        <span
+          className="search-btn"
+          onClick={() => this.props.onSearchBtnClick(this.state.term)}
+        >
+          Search
+        </span>
       </div>
     );
     // return <input onChange={event => console.log(event.target.value)} />
   }
 
   onInputChange(event) {
-    // var message = event.target.value;
-    // var encrypted = '';
-    // for (var i = 0; i < message.length; ++i) {
-    //   var c = message.charAt(i);
-    //   var asciiValue = c.charCodeAt(0) + 5;
-    //   encrypted += String.fromCharCode(asciiValue);
-    // }
-
     this.setState({ term: event.target.value });
   }
 }
