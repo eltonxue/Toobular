@@ -10,22 +10,13 @@ class SearchBar extends Component {
     this.onInputChange = this.onInputChange.bind(this);
     this.handleKeyPressed = this.handleKeyPressed.bind(this);
   }
-
-  handleKeyPressed = event => {
-    if (event.charCode === 13) {
-      this.props.onSearchBtnClick(this.state.term);
-
-      event.value = '';
-      this.setState({ term: '' });
-    }
-  };
   render() {
     return (
       <div className="search-bar">
         <input
-          placeholder="Search ..."
+          placeholder="Search..."
           value={this.state.term}
-          onChange={this.onInputChange}
+          onChange={event => this.onInputChange(event.target.value)}
           onKeyPress={this.handleKeyPressed}
         />
         <span
@@ -39,9 +30,19 @@ class SearchBar extends Component {
     // return <input onChange={event => console.log(event.target.value)} />
   }
 
-  onInputChange(event) {
-    this.setState({ term: event.target.value });
+  onInputChange(term) {
+    this.setState({ term });
+    this.props.onSearchBtnClick(term);
   }
+
+  handleKeyPressed = event => {
+    if (event.charCode === 13) {
+      this.props.onSearchBtnClick(this.state.term);
+
+      event.value = '';
+      this.setState({ term: '' });
+    }
+  };
 }
 
 export default SearchBar;
