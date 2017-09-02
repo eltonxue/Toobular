@@ -4,7 +4,11 @@ const VideoListItem = ({ video, onVideoSelect }) => {
   // const video = props.video;
 
   const imageURL = video.snippet.thumbnails.default.url;
-  const subTitle = video.snippet.title;
+  var subTitle = video.snippet.title;
+
+  if (subTitle.length > 50) {
+    subTitle = subTitle.substring(0, 50) + '...';
+  }
 
   return (
     <li onClick={() => onVideoSelect(video)} className="list-item">

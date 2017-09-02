@@ -12,11 +12,18 @@ const VideoList = props => {
     );
   });
 
+  const height = props.height - 15;
+
   return (
     <div className="center-element">
-      <ul className="col-xl-4 list-group" style={{ listStyle: 'none' }}>
-        {videoItems}
-      </ul>
+      <nav>
+        <ul
+          className="col-xl-4 list-group"
+          style={{ listStyle: 'none', maxHeight: height }}
+        >
+          {videoItems}
+        </ul>
+      </nav>
     </div>
   );
 };

@@ -10,6 +10,7 @@ class SearchBar extends Component {
     this.onInputChange = this.onInputChange.bind(this);
     this.handleKeyPressed = this.handleKeyPressed.bind(this);
   }
+
   render() {
     return (
       <div className="search-bar">
