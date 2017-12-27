@@ -7,3 +7,20 @@ Run this command:
 npm start
 ```
 Then, visit http://localhost:8080
+
+# Technologies Used
+
+Front-end:
+- HTML/CSS
+- React
+
+Back-end:
+- Node.js
+
+Packages:
+- Webpack
+- Babel
+- Lodash
+
+APIs:
+- YouTube API
